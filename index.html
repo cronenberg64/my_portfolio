@@ -904,45 +904,48 @@
         }
 
         function createSatellites() {
-            const satelliteCount = 6;
-            const symbols = ['⚙️', '🔥', '🤖', '💻', '🚀', '📊'];
-            
+            // Use the same tech stack icons as floating icons
+            const icons = [
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', name: 'Python' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', name: 'Java' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', name: 'React' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', name: 'Next.js' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg', name: 'Flutter' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg', name: 'TensorFlow' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg', name: 'PyTorch' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ros/ros-original.svg', name: 'ROS' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg', name: 'Firebase' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', name: 'TypeScript' }
+            ];
+            const satelliteCount = icons.length;
             for (let i = 0; i < satelliteCount; i++) {
-                // Create canvas for text texture
-                const canvas = document.createElement('canvas');
-                canvas.width = 64;
-                canvas.height = 64;
-                const ctx = canvas.getContext('2d');
-                ctx.font = '32px Arial';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                ctx.fillText(symbols[i], 32, 32);
+                const icon = icons[i];
+                const textureLoader = new THREE.TextureLoader();
+                textureLoader.load(icon.url, function(texture) {
+                    const material = new THREE.SpriteMaterial({ 
+                        map: texture,
+                        transparent: true 
+                    });
+                    const sprite = new THREE.Sprite(material);
+                    sprite.scale.set(0.7, 0.7, 1);
 
-                // Create texture and material
-                const texture = new THREE.CanvasTexture(canvas);
-                const material = new THREE.SpriteMaterial({ 
-                    map: texture,
-                    transparent: true 
+                    // Position satellites in orbit
+                    const angle = (i / satelliteCount) * Math.PI * 2;
+                    const radius = 4.5; // Fixed radius for inner circle
+                    sprite.position.x = Math.cos(angle) * radius;
+                    sprite.position.y = Math.sin(angle) * radius;
+                    sprite.position.z = (Math.random() - 0.5) * 1.5;
+
+                    // Store orbital properties
+                    sprite.userData = {
+                        angle: angle,
+                        radius: radius,
+                        speed: 0.008 // Slightly slower for a smoother effect
+                    };
+
+                    satellites.push(sprite);
+                    scene.add(sprite);
                 });
-                const sprite = new THREE.Sprite(material);
-                sprite.scale.set(0.5, 0.5, 1);
-
-                // Position satellites in orbit
-                const angle = (i / satelliteCount) * Math.PI * 2;
-                const radius = 4 + Math.random() * 2;
-                sprite.position.x = Math.cos(angle) * radius;
-                sprite.position.y = Math.sin(angle) * radius;
-                sprite.position.z = (Math.random() - 0.5) * 2;
-
-                // Store orbital properties
-                sprite.userData = {
-                    angle: angle,
-                    radius: radius,
-                    speed: 0.01 + Math.random() * 0.02
-                };
-
-                satellites.push(sprite);
-                scene.add(sprite);
             }
         }
 
