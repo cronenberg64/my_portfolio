@@ -1,23 +1,22 @@
-# Jonathan Setiawan - Portfolio
+# My Portfolio
 
-A modern, responsive portfolio website showcasing Jonathan Setiawan's work as a student and aspiring developer.
+A modern, responsive portfolio website showcasing my work as a student and aspiring developer.
 
 ## About Me
 
-- 🎓 I'm a student majoring in **Information System Science & Engineering** at **Ritsumeikan University**
-- 🤖 Currently learning **AI, Machine Learning, and Data Science**
-- 🔬 Interested in **Data Science, Machine Learning, and Robotics**
-- 📚 I love reading books, working out, and watching anime in my spare time
-- 📍 Based in Osaka, Japan
+- I'm a student majoring in **Information System Science & Engineering** at **Ritsumeikan University**
+- Currently learning **AI, Machine Learning, and Data Science**
+- Interested in **Data Science, Machine Learning, and Robotics**
+- I love reading books, working out, and watching anime in my spare time
 
 ## Features
 
-- 🎨 Modern, glassmorphism design
-- 🌍 Interactive 3D planet background using Three.js
-- 📱 Fully responsive design
-- ⚡ Smooth animations and transitions
-- 🎯 SEO optimized
-- 🔒 Security headers configured
+- Modern, glassmorphism design
+- Interactive 3D planet background using Three.js
+- Fully responsive design
+- Smooth animations and transitions
+- SEO optimized
+- Security headers configured
 
 ## Tech Stack
 
@@ -119,8 +118,8 @@ To customize this portfolio for your own use:
 ## Connect With Me
 
 - GitHub: [@cronenberg64](https://github.com/cronenberg64)
-- LinkedIn: [Jonathan Setiawan](https://linkedin.com/in/jonathan-setiawan)
-- Email: [Your email]
+- LinkedIn: [Jonathan Setiawan](https://www.linkedin.com/in/jonathans1902/)
+- Email: [jonathanrustam2@gmail.com]
 
 ## License
 
