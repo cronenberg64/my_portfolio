@@ -1,6 +1,14 @@
-# Alex Chen - Portfolio
+# Jonathan Setiawan - Portfolio
 
-A modern, responsive portfolio website showcasing Alex Chen's work as a Full Stack Developer & AI Engineer.
+A modern, responsive portfolio website showcasing Jonathan Setiawan's work as a student and aspiring developer.
+
+## About Me
+
+- 🎓 I'm a student majoring in **Information System Science & Engineering** at **Ritsumeikan University**
+- 🤖 Currently learning **AI, Machine Learning, and Data Science**
+- 🔬 Interested in **Data Science, Machine Learning, and Robotics**
+- 📚 I love reading books, working out, and watching anime in my spare time
+- 📍 Based in Osaka, Japan
 
 ## Features
 
@@ -11,13 +19,42 @@ A modern, responsive portfolio website showcasing Alex Chen's work as a Full Sta
 - 🎯 SEO optimized
 - 🔒 Security headers configured
 
-## Technologies Used
+## Tech Stack
 
-- HTML5
-- CSS3 (with CSS Grid and Flexbox)
-- JavaScript (ES6+)
-- Three.js for 3D graphics
-- Google Fonts (Inter & JetBrains Mono)
+### Programming Languages
+- Python
+- Java
+- TypeScript/JavaScript
+- HTML5/CSS3
+- Dart
+
+### Frameworks & Libraries
+- Flutter
+- React.js
+- Next.js
+- Spring Boot
+- Node.js
+
+### Data Science & AI
+- NumPy
+- Pandas
+- PyTorch
+- TensorFlow
+- OpenCV
+- Jupyter
+
+### Other Tools
+- ROS (Robot Operating System)
+- Firebase
+- Git
+- Figma
+- renPy
+
+## Current Projects
+
+- **TomatoQAS** - Tomato quality assessment system (Python)
+- **Hydraulic-Fault-Dashboard** - Real-time hydraulic system fault prediction dashboard (TypeScript)
+- **Kensaku** - Modern web application platform built with Next.js 13+ and Tailwind CSS
 
 ## Local Development
 
@@ -78,6 +115,12 @@ To customize this portfolio for your own use:
 3. Update the projects section with your own work
 4. Modify the color scheme in the CSS variables
 5. Update the contact form to point to your preferred contact method
+
+## Connect With Me
+
+- GitHub: [@cronenberg64](https://github.com/cronenberg64)
+- LinkedIn: [Jonathan Setiawan](https://linkedin.com/in/jonathan-setiawan)
+- Email: [Your email]
 
 ## License
 

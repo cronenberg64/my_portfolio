@@ -1,7 +1,7 @@
 {
-  "name": "alex-chen-portfolio",
+  "name": "jonathan-setiawan-portfolio",
   "version": "1.0.0",
-  "description": "Alex Chen's Full Stack Developer & AI Engineer Portfolio",
+  "description": "Jonathan Setiawan's Student & Aspiring Developer Portfolio",
   "main": "index.html",
   "scripts": {
     "dev": "npx serve .",
@@ -10,11 +10,12 @@
   },
   "keywords": [
     "portfolio",
+    "student",
     "developer",
-    "full-stack",
-    "ai-engineer"
+    "ai",
+    "machine-learning"
   ],
-  "author": "Alex Chen",
+  "author": "Jonathan Setiawan",
   "license": "MIT",
   "devDependencies": {
     "serve": "^14.2.1"
