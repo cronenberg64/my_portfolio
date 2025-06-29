@@ -785,8 +785,11 @@
                 // Create satellites (orbiting icons)
                 createSatellites();
 
-                // Create floating particles
-                createFloatingParticles();
+                // Create star field
+                createStarField();
+
+                // Create floating tech stack icons
+                createFloatingTechIcons();
 
                 // Lighting
                 const ambientLight = new THREE.AmbientLight(0x202040, 0.6);
@@ -856,34 +859,44 @@
             }
         }
 
-        function createFloatingParticles() {
-            const particleCount = 100;
-            for (let i = 0; i < particleCount; i++) {
-                const geometry = new THREE.SphereGeometry(0.02, 8, 8);
-                const material = new THREE.MeshBasicMaterial({
-                    color: Math.random() > 0.5 ? 0x00d4aa : 0x4dabf7,
-                    transparent: true,
-                    opacity: 0.6
+        function createFloatingTechIcons() {
+            // List of tech stack icon URLs (SVG/PNG)
+            const icons = [
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', name: 'Python' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', name: 'Java' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', name: 'React' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', name: 'Next.js' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg', name: 'Flutter' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg', name: 'TensorFlow' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg', name: 'PyTorch' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ros/ros-original.svg', name: 'ROS' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg', name: 'Firebase' },
+                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', name: 'TypeScript' }
+            ];
+            const iconCount = icons.length;
+            for (let i = 0; i < iconCount; i++) {
+                const icon = icons[i];
+                const textureLoader = new THREE.TextureLoader();
+                textureLoader.load(icon.url, function(texture) {
+                    const material = new THREE.SpriteMaterial({ map: texture, transparent: true, opacity: 0.85 });
+                    const sprite = new THREE.Sprite(material);
+                    sprite.scale.set(0.7, 0.7, 1);
+                    sprite.position.set(
+                        (Math.random() - 0.5) * 16,
+                        (Math.random() - 0.5) * 16,
+                        (Math.random() - 0.5) * 16
+                    );
+                    sprite.userData = {
+                        velocity: new THREE.Vector3(
+                            (Math.random() - 0.5) * 0.01,
+                            (Math.random() - 0.5) * 0.01,
+                            (Math.random() - 0.5) * 0.01
+                        ),
+                        originalPosition: sprite.position.clone()
+                    };
+                    particles.push(sprite);
+                    scene.add(sprite);
                 });
-                const particle = new THREE.Mesh(geometry, material);
-                
-                particle.position.set(
-                    (Math.random() - 0.5) * 20,
-                    (Math.random() - 0.5) * 20,
-                    (Math.random() - 0.5) * 20
-                );
-                
-                particle.userData = {
-                    velocity: new THREE.Vector3(
-                        (Math.random() - 0.5) * 0.01,
-                        (Math.random() - 0.5) * 0.01,
-                        (Math.random() - 0.5) * 0.01
-                    ),
-                    originalPosition: particle.position.clone()
-                };
-                
-                particles.push(particle);
-                scene.add(particle);
             }
         }
 
