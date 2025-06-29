@@ -782,9 +782,6 @@
                 // Create satellites (orbiting icons)
                 createSatellites();
 
-                // Create floating tech stack icons
-                createFloatingTechIcons();
-
                 // Lighting
                 const ambientLight = new THREE.AmbientLight(0x202040, 0.6);
                 scene.add(ambientLight);
@@ -827,80 +824,6 @@
                 orbitRings.push(ring);
                 scene.add(ring);
             }
-        }
-
-        function createFloatingTechIcons() {
-            // List of tech stack icon URLs (SVG/PNG)
-            const icons = [
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', name: 'Python' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', name: 'Java' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', name: 'React' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', name: 'Next.js' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg', name: 'Flutter' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg', name: 'TensorFlow' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg', name: 'PyTorch' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ros/ros-original.svg', name: 'ROS' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg', name: 'Firebase' },
-                { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', name: 'TypeScript' }
-            ];
-            const iconCount = icons.length;
-            for (let i = 0; i < iconCount; i++) {
-                const icon = icons[i];
-                const textureLoader = new THREE.TextureLoader();
-                textureLoader.load(icon.url, function(texture) {
-                    const material = new THREE.SpriteMaterial({ map: texture, transparent: true, opacity: 0.85 });
-                    const sprite = new THREE.Sprite(material);
-                    sprite.scale.set(0.7, 0.7, 1);
-                    sprite.position.set(
-                        (Math.random() - 0.5) * 16,
-                        (Math.random() - 0.5) * 16,
-                        (Math.random() - 0.5) * 16
-                    );
-                    sprite.userData = {
-                        velocity: new THREE.Vector3(
-                            (Math.random() - 0.5) * 0.01,
-                            (Math.random() - 0.5) * 0.01,
-                            (Math.random() - 0.5) * 0.01
-                        ),
-                        originalPosition: sprite.position.clone()
-                    };
-                    particles.push(sprite);
-                    scene.add(sprite);
-                });
-            }
-        }
-
-        function createFallbackBackground() {
-            // CSS fallback if Three.js fails
-            const canvas = document.getElementById('planet-canvas');
-            canvas.style.display = 'none';
-            
-            // Create CSS animated background
-            const fallbackBg = document.createElement('div');
-            fallbackBg.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                z-index: -1;
-                background: 
-                    radial-gradient(circle at 20% 50%, rgba(0, 212, 170, 0.3) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(77, 171, 247, 0.3) 0%, transparent 50%),
-                    radial-gradient(circle at 40% 80%, rgba(255, 107, 53, 0.2) 0%, transparent 50%),
-                    linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
-                animation: backgroundPulse 8s ease-in-out infinite;
-            `;
-            
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes backgroundPulse {
-                    0%, 100% { opacity: 0.8; }
-                    50% { opacity: 1; }
-                }
-            `;
-            document.head.appendChild(style);
-            document.body.appendChild(fallbackBg);
         }
 
         function createSatellites() {
@@ -947,6 +870,39 @@
                     scene.add(sprite);
                 });
             }
+        }
+
+        function createFallbackBackground() {
+            // CSS fallback if Three.js fails
+            const canvas = document.getElementById('planet-canvas');
+            canvas.style.display = 'none';
+            
+            // Create CSS animated background
+            const fallbackBg = document.createElement('div');
+            fallbackBg.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: -1;
+                background: 
+                    radial-gradient(circle at 20% 50%, rgba(0, 212, 170, 0.3) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(77, 171, 247, 0.3) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 80%, rgba(255, 107, 53, 0.2) 0%, transparent 50%),
+                    linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
+                animation: backgroundPulse 8s ease-in-out infinite;
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes backgroundPulse {
+                    0%, 100% { opacity: 0.8; }
+                    50% { opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+            document.body.appendChild(fallbackBg);
         }
 
         function animate() {
