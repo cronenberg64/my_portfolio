@@ -1,13 +1,6 @@
-# My Portfolio
+# Jonathan Setiawan - Portfolio
 
-A modern, responsive portfolio website showcasing my work as a student and aspiring developer.
-
-## About Me
-
-- I'm a student majoring in **Information System Science & Engineering** at **Ritsumeikan University**
-- Currently learning **AI, Machine Learning, and Data Science**
-- Interested in **Data Science, Machine Learning, and Robotics**
-- I love reading books, working out, and watching anime in my spare time
+A modern, responsive portfolio website showcasing Jonathan Setiawan's work as a student and aspiring developer.
 
 ## Features
 
@@ -18,43 +11,6 @@ A modern, responsive portfolio website showcasing my work as a student and aspir
 - SEO optimized
 - Security headers configured
 
-## Tech Stack
-
-### Programming Languages
-- Python
-- Java
-- TypeScript/JavaScript
-- HTML5/CSS3
-- Dart
-
-### Frameworks & Libraries
-- Flutter
-- React.js
-- Next.js
-- Spring Boot
-- Node.js
-
-### Data Science & AI
-- NumPy
-- Pandas
-- PyTorch
-- TensorFlow
-- OpenCV
-- Jupyter
-
-### Other Tools
-- ROS (Robot Operating System)
-- Firebase
-- Git
-- Figma
-- renPy
-
-## Current Projects
-
-- **TomatoQAS** - Tomato quality assessment system (Python)
-- **Hydraulic-Fault-Dashboard** - Real-time hydraulic system fault prediction dashboard (TypeScript)
-- **Kensaku** - Modern web application platform built with Next.js 13+ and Tailwind CSS
-
 ## Local Development
 
 1. Clone the repository:
@@ -63,54 +19,52 @@ git clone <your-repo-url>
 cd my_portfolio
 ```
 
-2. Install dependencies:
+2. Install dependencies (if any):
 ```bash
 npm install
 ```
 
-3. Start the development server:
+3. Start a local server (optional, for static HTML):
 ```bash
-npm run dev
+npx serve public
 ```
 
-4. Open your browser and navigate to `http://localhost:3000`
+4. Open your browser and navigate to `http://localhost:3000` (or the port shown)
 
-## Deployment
+## Deployment on Netlify
 
-This project is configured for easy deployment on Vercel:
+This project is configured for easy deployment on Netlify:
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Vercel will automatically detect the configuration and deploy
+1. **Ensure all your static files (including `index.html` and `profile_picture.jpg`) are in the `public` directory.**
+2. Push your code to GitHub.
+3. Go to [Netlify](https://app.netlify.com/) and create a new site from Git.
+4. When prompted for build settings, use:
+   - **Base directory:** *(leave blank)*
+   - **Build command:** *(leave blank)*
+   - **Publish directory:** `public`
+5. Click "Deploy site".
 
-### Manual Deployment
-
-If you prefer to deploy manually:
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
+Your site will be live at a Netlify URL, and all static assets in `public` (including your profile picture) will be served correctly.
 
 ## Project Structure
 
 ```
 my_portfolio/
-├── index.html          # Main HTML file
-├── package.json        # Project dependencies and scripts
-├── vercel.json         # Vercel deployment configuration
-└── README.md          # Project documentation
+├── public/
+│   ├── index.html          # Main HTML file
+│   ├── profile_picture.jpg # Profile picture
+│   └── ...                # Other static assets
+├── package.json            # Project dependencies and scripts
+├── README.md               # Project documentation
+└── ...
 ```
 
 ## Customization
 
 To customize this portfolio for your own use:
 
-1. Update the personal information in `index.html`
-2. Replace the avatar placeholder with your own image
+1. Update the personal information in `public/index.html`
+2. Replace the profile picture in `public/profile_picture.jpg`
 3. Update the projects section with your own work
 4. Modify the color scheme in the CSS variables
 5. Update the contact form to point to your preferred contact method
