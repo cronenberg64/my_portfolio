@@ -754,9 +754,6 @@
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 renderer.setClearColor(0x000000, 0);
 
-                // Create starfield background
-                createStarField();
-
                 // Create low-poly planet
                 const geometry = new THREE.IcosahedronGeometry(2, 1);
                 const material = new THREE.MeshPhongMaterial({ 
@@ -785,9 +782,6 @@
                 // Create satellites (orbiting icons)
                 createSatellites();
 
-                // Create star field
-                createStarField();
-
                 // Create floating tech stack icons
                 createFloatingTechIcons();
 
@@ -814,30 +808,6 @@
                 // Fallback to CSS background
                 createFallbackBackground();
             }
-        }
-
-        function createStarField() {
-            const starGeometry = new THREE.BufferGeometry();
-            const starCount = 2000;
-            const starPositions = new Float32Array(starCount * 3);
-
-            for (let i = 0; i < starCount * 3; i += 3) {
-                starPositions[i] = (Math.random() - 0.5) * 100;     // x
-                starPositions[i + 1] = (Math.random() - 0.5) * 100; // y
-                starPositions[i + 2] = (Math.random() - 0.5) * 100; // z
-            }
-
-            starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
-            
-            const starMaterial = new THREE.PointsMaterial({
-                color: 0xffffff,
-                size: 0.5,
-                transparent: true,
-                opacity: 0.8
-            });
-
-            const stars = new THREE.Points(starGeometry, starMaterial);
-            scene.add(stars);
         }
 
         function createOrbitRings() {
