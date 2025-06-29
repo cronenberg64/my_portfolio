@@ -1,0 +1,22 @@
+{
+  "name": "alex-chen-portfolio",
+  "version": "1.0.0",
+  "description": "Alex Chen's Full Stack Developer & AI Engineer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build required'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "full-stack",
+    "ai-engineer"
+  ],
+  "author": "Alex Chen",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+} 
