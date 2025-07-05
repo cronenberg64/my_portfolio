@@ -300,16 +300,24 @@
         }
 
         .project-image.no-image {
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue));
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .project-image.no-image .no-image-box {
+            width: 60%;
+            height: 60%;
             background: #fff;
             color: #222;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            width: 100%;
-            height: 100%;
             border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
         }
 
         .project-title {
@@ -620,7 +628,7 @@
         <h2 class="section-title fade-in">Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">KADD-AI</h3>
                 <p>AI-powered steel defect detection system with KPI calculation and automated reporting.</p>
                 <div class="project-tags">
@@ -633,7 +641,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">SnapRecipe</h3>
                 <p>AI-powered mobile app that generates cooking recipes from food photos, videos, or social media links.</p>
                 <div class="project-tags">
@@ -660,7 +668,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">Ichiba-Box</h3>
                 <p>Comprehensive B2B platform connecting local businesses with customers in Japan. Digital storefronts, analytics, and engagement tools.</p>
                 <div class="project-tags">
@@ -672,7 +680,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">Bloom Business Hub</h3>
                 <p>AI-powered business operations platform for small businesses. Automates legal docs, finances, and strategic guidance.</p>
                 <div class="project-tags">
@@ -713,7 +721,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">PPE_Detection</h3>
                 <p>Detects whether or not someone is wearing PPE from an image using computer vision.</p>
                 <div class="project-tags">
@@ -725,7 +733,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">TomatoQAS</h3>
                 <p>Tomato quality assessment system using computer vision and machine learning.</p>
                 <div class="project-tags">
@@ -737,7 +745,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">Industrial-Defect-Detection</h3>
                 <p>AI-powered defect detection system for industrial manufacturing.</p>
                 <div class="project-tags">
@@ -763,7 +771,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">PBL3_GroupH</h3>
                 <p>Collaborative project for innovative web solutions using modern technologies.</p>
                 <div class="project-tags">
@@ -775,7 +783,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">GameJam</h3>
                 <p>Game developed for a game jam in collaboration with Ritsumeikan University, Kansai University, and Northern Arizona University.</p>
                 <div class="project-tags">
@@ -787,7 +795,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">weather_app</h3>
                 <p>Minimal weather app built with Flutter as a project-based learning exercise.</p>
                 <div class="project-tags">
@@ -799,7 +807,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">To-Do-App</h3>
                 <p>To-do app using Flutter as a project-based learning exercise.</p>
                 <div class="project-tags">
@@ -811,7 +819,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">MealPlannerApp</h3>
                 <p>Java project to help track your meals and plan recipes.</p>
                 <div class="project-tags">
@@ -823,7 +831,7 @@
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image">No Image</div>
+                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
                 <h3 class="project-title">Inklet</h3>
                 <p>Cross-platform ebook reader built with React Native.</p>
                 <div class="project-tags">
