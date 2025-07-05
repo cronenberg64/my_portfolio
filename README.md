@@ -1,6 +1,6 @@
 # Jonathan Setiawan - Portfolio
 
-A modern, responsive portfolio website showcasing Jonathan Setiawan's work as a student and aspiring developer.
+A modern, responsive portfolio website using three.js showcasing my portfolio as a student and aspiring developer.
 
 ## Features
 
@@ -68,12 +68,6 @@ To customize this portfolio for your own use:
 3. Update the projects section with your own work
 4. Modify the color scheme in the CSS variables
 5. Update the contact form to point to your preferred contact method
-
-## Connect With Me
-
-- GitHub: [@cronenberg64](https://github.com/cronenberg64)
-- LinkedIn: [Jonathan Setiawan](https://www.linkedin.com/in/jonathans1902/)
-- Email: [jonathanrustam2@gmail.com]
 
 ## License
 
