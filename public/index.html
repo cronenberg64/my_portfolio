@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Setiawan - Student & Aspiring Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         * {
@@ -306,6 +309,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .project-image.no-image .no-image-box {
             width: 60%;
             height: 60%;
@@ -317,7 +321,7 @@
             font-size: 1.2rem;
             font-weight: 700;
             border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
         }
 
         .project-title {
@@ -528,8 +532,15 @@
 
         /* Animations */
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .floating {
@@ -549,6 +560,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- 3D Planet Canvas -->
     <canvas id="planet-canvas"></canvas>
@@ -583,43 +595,111 @@
     <section id="about" class="section">
         <div class="about fade-in" style="gap: 4rem; align-items: flex-start;">
             <div class="about-image" style="text-align: center;">
-                <img src="/profile_picture.png" alt="Jonathan Setiawan" class="avatar" style="width: 320px; height: 320px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 32px rgba(0,0,0,0.25); margin-bottom: 2rem; background: #222;" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Jonathan+Setiawan&background=0D8ABC&color=fff';">
-                <a href="/Resume.pdf" download class="cta-button" style="display:inline-block;margin-top:2rem;font-size:1.1rem;padding:0.9rem 2.2rem;text-decoration:none;">Download My Resume</a>
+                <img src="/profile_picture.png" alt="Jonathan Setiawan" class="avatar"
+                    style="width: 320px; height: 320px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 32px rgba(0,0,0,0.25); margin-bottom: 2rem; background: #222;"
+                    onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Jonathan+Setiawan&background=0D8ABC&color=fff';">
+                <a href="/Resume.pdf" download class="cta-button"
+                    style="display:inline-block;margin-top:2rem;font-size:1.1rem;padding:0.9rem 2.2rem;text-decoration:none;">Download
+                    My Resume</a>
             </div>
             <div class="about-content">
                 <h2 class="section-title" style="margin-bottom: 1.5rem;">About Me</h2>
-                <p style="font-size: 1.15rem; margin-bottom: 2rem;">Hi! I'm Jonathan Setiawan, a student majoring in Information System Science & Engineering at Ritsumeikan University. I'm passionate about AI/ML, Computer Vision, and Robotics. I love reading books, working out, and watching anime in my spare time. I enjoy challenging myself with building systems that address real-world problems.</p>
+                <p style="font-size: 1.15rem; margin-bottom: 2rem;">Hi! I'm Jonathan Setiawan, a student majoring in
+                    Information System Science & Engineering at Ritsumeikan University. I'm interested in AI/ML, NLP,
+                    and Robotics. I love reading books, working out, and watching anime in my spare time. I enjoy
+                    challenging myself with building systems that address real-world problems.</p>
                 <h3 class="section-subtitle" style="margin-bottom: 1rem; margin-top: 2.5rem;">Tech Stack & Tools</h3>
-                <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 1.2rem 2.2rem; margin-bottom: 1.5rem;">
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="width:28px;vertical-align:middle;"> Python</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="width:28px;vertical-align:middle;"> JavaScript</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" style="width:28px;vertical-align:middle;"> TypeScript</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" style="width:28px;vertical-align:middle;"> Java</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" style="width:28px;vertical-align:middle;"> C++</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" style="width:28px;vertical-align:middle;"> Dart</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" style="width:28px;vertical-align:middle;"> React</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" style="width:28px;vertical-align:middle;filter:invert(1);"> Next.js</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" style="width:28px;vertical-align:middle;"> Flutter</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="width:28px;vertical-align:middle;"> HTML5</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="width:28px;vertical-align:middle;"> CSS3</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg" alt="Tailwind CSS" style="width:28px;vertical-align:middle;background:#38bdf8;border-radius:6px;padding:3px;"> Tailwind CSS</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg" alt="Three.js" style="width:28px;vertical-align:middle;filter:invert(1);"> Three.js</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" style="width:28px;vertical-align:middle;"> TensorFlow</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" style="width:28px;vertical-align:middle;"> OpenCV</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" style="width:28px;vertical-align:middle;"> Jupyter</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" style="width:28px;vertical-align:middle;"> NumPy</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" style="width:28px;vertical-align:middle;"> Pandas</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" style="width:28px;vertical-align:middle;"> PyTorch</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ros/ros-original.svg" alt="ROS" style="width:28px;vertical-align:middle;"> ROS</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" style="width:28px;vertical-align:middle;"> Firebase</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" style="width:28px;vertical-align:middle;"> Node.js</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" style="width:28px;vertical-align:middle;"> Spring Boot</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" style="width:28px;vertical-align:middle;"> Docker</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg" alt="Vercel" style="width:28px;vertical-align:middle;background:#ffffff;border-radius:6px;padding:5px;"> Vercel</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:28px;vertical-align:middle;"> GitHub</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="width:28px;vertical-align:middle;"> Git</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio" style="width:28px;vertical-align:middle;"> Android Studio</span>
-                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" style="width:28px;vertical-align:middle;"> Figma</span>
+                <div class="tech-stack"
+                    style="display: flex; flex-wrap: wrap; gap: 1.2rem 2.2rem; margin-bottom: 1.5rem;">
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python" style="width:28px;vertical-align:middle;"> Python</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" style="width:28px;vertical-align:middle;"> JavaScript</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                            alt="TypeScript" style="width:28px;vertical-align:middle;"> TypeScript</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                            style="width:28px;vertical-align:middle;"> Java</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++" style="width:28px;vertical-align:middle;"> C++</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"
+                            style="width:28px;vertical-align:middle;"> Dart</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React" style="width:28px;vertical-align:middle;"> React</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                            alt="Next.js" style="width:28px;vertical-align:middle;filter:invert(1);"> Next.js</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                            alt="Flutter" style="width:28px;vertical-align:middle;"> Flutter</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5" style="width:28px;vertical-align:middle;"> HTML5</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                            style="width:28px;vertical-align:middle;"> CSS3</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg" alt="Tailwind CSS"
+                            style="width:28px;vertical-align:middle;background:#38bdf8;border-radius:6px;padding:3px;">
+                        Tailwind CSS</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"
+                            alt="Three.js" style="width:28px;vertical-align:middle;filter:invert(1);"> Three.js</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                            alt="TensorFlow" style="width:28px;vertical-align:middle;"> TensorFlow</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
+                            alt="OpenCV" style="width:28px;vertical-align:middle;"> OpenCV</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+                            alt="Jupyter" style="width:28px;vertical-align:middle;"> Jupyter</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                            alt="NumPy" style="width:28px;vertical-align:middle;"> NumPy</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                            alt="Pandas" style="width:28px;vertical-align:middle;"> Pandas</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                            alt="PyTorch" style="width:28px;vertical-align:middle;"> PyTorch</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ros/ros-original.svg" alt="ROS"
+                            style="width:28px;vertical-align:middle;"> ROS</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                            alt="Firebase" style="width:28px;vertical-align:middle;"> Firebase</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js" style="width:28px;vertical-align:middle;"> Node.js</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                            alt="Spring Boot" style="width:28px;vertical-align:middle;"> Spring Boot</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            alt="Docker" style="width:28px;vertical-align:middle;"> Docker</span>
+                    <span class="tech-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg"
+                            alt="Vercel"
+                            style="width:28px;vertical-align:middle;background:#ffffff;border-radius:6px;padding:5px;">
+                        Vercel</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub" style="width:28px;vertical-align:middle;"> GitHub</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                            style="width:28px;vertical-align:middle;"> Git</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
+                            alt="Android Studio" style="width:28px;vertical-align:middle;"> Android Studio</span>
+                    <span class="tech-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                            alt="Figma" style="width:28px;vertical-align:middle;"> Figma</span>
                 </div>
             </div>
         </div>
@@ -630,53 +710,122 @@
         <h2 class="section-title fade-in">Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card fade-in">
+                <div class="project-image no-image">
+                    <div class="no-image-box">CLIP-mod</div>
+                </div>
+                <h3 class="project-title">CLIP-mod</h3>
+                <p>A redesigned CLIP architecture replacing the ViT encoder with modern CNN backbones (ConvNeXt V2) to
+                    improve efficiency and inference speed while maintaining strong vision-language alignment.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">AI</span>
+                    <span class="project-tag">Computer Vision</span>
+                </div>
+                <div class="project-buttons">
+                    <a href="https://github.com/cronenberg64/CLIP-mod" class="project-btn" target="_blank"
+                        rel="noopener">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image no-image">
+                    <div class="no-image-box">Emergent MAS</div>
+                </div>
+                <h3 class="project-title">Emergent-Multi-Agent-Systems</h3>
+                <p>A framework for exploring emergent behavior in continuous-learning multi-agent environments.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">AI</span>
+                    <span class="project-tag">Multi-Agent</span>
+                </div>
+                <div class="project-buttons">
+                    <a href="https://github.com/cronenberg64/Emergent-Multi-Agent-Systems" class="project-btn"
+                        target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image no-image">
+                    <div class="no-image-box">Semantic Memory</div>
+                </div>
+                <h3 class="project-title">semantic-memory-graph</h3>
+                <p>A cognitive architecture inspired graph system with evolving nodes, adaptive edges, and emergent
+                    concept formation.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">AI</span>
+                    <span class="project-tag">Graph</span>
+                </div>
+                <div class="project-buttons">
+                    <a href="https://github.com/cronenberg64/semantic-memory-graph" class="project-btn" target="_blank"
+                        rel="noopener">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Existing Projects -->
+            <div class="project-card fade-in">
                 <div class="project-image">
-                    <img src="/project_images/robot-motion-planner-preview.png" alt="Robot Motion Planner" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="/project_images/robot-motion-planner-preview.png" alt="Robot Motion Planner"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h3 class="project-title">Robot Motion Planner</h3>
-                <p>Natural language to MoveIt trajectory converter for robotics. Generates, visualizes, and exports robot arm movements.</p>
+                <p>Natural language to MoveIt trajectory converter for robotics. Generates, visualizes, and exports
+                    robot arm movements.</p>
                 <div class="project-tags">
                     <span class="project-tag">TypeScript</span>
                     <span class="project-tag">Robotics</span>
                 </div>
                 <div class="project-buttons">
-                    <a href="https://github.com/cronenberg64/Robot-Motion-Planner" class="project-btn" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://robot-motion-planner.netlify.app" class="project-btn" target="_blank" rel="noopener">Live Demo</a>
+                    <a href="https://github.com/cronenberg64/Robot-Motion-Planner" class="project-btn" target="_blank"
+                        rel="noopener">GitHub</a>
+                    <a href="https://robot-motion-planner.netlify.app" class="project-btn" target="_blank"
+                        rel="noopener">Live Demo</a>
                 </div>
             </div>
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <img src="/project_images/ptg-forge-preview.png" alt="Prompt to Gazebo Sandbox" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="/project_images/ptg-forge-preview.png" alt="Prompt to Gazebo Sandbox"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h3 class="project-title">Prompt to Gazebo Sandbox</h3>
-                <p>AI-powered tool that generates complete ROS2/Gazebo simulation environments from natural language prompts for rapid robotics prototyping.</p>
+                <p>AI-powered tool that generates complete ROS2/Gazebo simulation environments from natural language
+                    prompts for rapid robotics prototyping.</p>
                 <div class="project-tags">
                     <span class="project-tag">TypeScript</span>
                     <span class="project-tag">AI</span>
                     <span class="project-tag">Robotics</span>
                 </div>
                 <div class="project-buttons">
-                    <a href="https://github.com/cronenberg64/PTG-Forge" class="project-btn" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://ptg-forge.netlify.app" class="project-btn" target="_blank" rel="noopener">Live Demo</a>
+                    <a href="https://github.com/cronenberg64/PTG-Forge" class="project-btn" target="_blank"
+                        rel="noopener">GitHub</a>
+                    <a href="https://ptg-forge.netlify.app" class="project-btn" target="_blank" rel="noopener">Live
+                        Demo</a>
                 </div>
             </div>
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <img src="/project_images/hydraulic-fault-preview.png" alt="Hydraulic Systems Fault Detection Dashboard" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="/project_images/hydraulic-fault-preview.png"
+                        alt="Hydraulic Systems Fault Detection Dashboard"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h3 class="project-title">Hydraulic Systems Fault Detection Dashboard</h3>
-                <p>Interactive web dashboard for real-time hydraulic system monitoring, fault simulation, and predictive maintenance.</p>
+                <p>Interactive web dashboard for real-time hydraulic system monitoring, fault simulation, and predictive
+                    maintenance.</p>
                 <div class="project-tags">
                     <span class="project-tag">TypeScript</span>
                     <span class="project-tag">Data Visualization</span>
                 </div>
                 <div class="project-buttons">
-                    <a href="https://github.com/cronenberg64/Hydraulic-Fault-Dashboard" class="project-btn" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://hydraulic-fault-dashboard.netlify.app" class="project-btn" target="_blank" rel="noopener">Live Demo</a>
+                    <a href="https://github.com/cronenberg64/Hydraulic-Fault-Dashboard" class="project-btn"
+                        target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://hydraulic-fault-dashboard.netlify.app" class="project-btn" target="_blank"
+                        rel="noopener">Live Demo</a>
                 </div>
             </div>
             <div class="project-card fade-in">
-                <div class="project-image no-image"><div class="no-image-box">No Image</div></div>
+                <div class="project-image no-image">
+                    <div class="no-image-box">No Image</div>
+                </div>
                 <h3 class="project-title">TomatoQAS</h3>
                 <p>Tomato quality assessment system using computer vision and machine learning.</p>
                 <div class="project-tags">
@@ -689,32 +838,38 @@
             </div>
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <img src="/project_images/pbl3.png" alt="PBL3 Project" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="/project_images/pbl3.png" alt="PBL3 Project"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h3 class="project-title">PBL3_GroupH</h3>
-                <p>Collaborative project for innovative web solutions using modern technologies.</p>
+                <p>A mobile application prototype for identifying and managing cats using an image re-identification
+                    model.</p>
                 <div class="project-tags">
-                    <span class="project-tag">TypeScript</span>
-                    <span class="project-tag">Web</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">AI</span>
+                    <span class="project-tag">Mobile</span>
                 </div>
                 <div class="project-buttons">
-                    <a href="https://github.com/cronenberg64/PBL3_GroupH" class="project-btn" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://xknt21.github.io/" class="project-btn" target="_blank" rel="noopener">Website</a>
+                    <a href="https://github.com/cronenberg64/PBL3_GroupH" class="project-btn" target="_blank"
+                        rel="noopener">GitHub</a>
                 </div>
             </div>
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <img src="/project_images/ros-debug-toolkit.png" alt="ROS Debug Toolkit" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="/project_images/ros-debug-toolkit.png" alt="ROS Debug Toolkit"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h3 class="project-title">ROS Debug Toolkit</h3>
-                <p>Debugging toolkit for ROS with utilities to inspect topics, nodes, and messages, plus diagnostics for common ROS issues.</p>
+                <p>Debugging toolkit for ROS with utilities to inspect topics, nodes, and messages, plus diagnostics for
+                    common ROS issues.</p>
                 <div class="project-tags">
                     <span class="project-tag">Python</span>
                     <span class="project-tag">ROS</span>
                     <span class="project-tag">Utilities</span>
                 </div>
                 <div class="project-buttons">
-                    <a href="https://github.com/cronenberg64/ROS-debug-toolkit" class="project-btn" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/cronenberg64/ROS-debug-toolkit" class="project-btn" target="_blank"
+                        rel="noopener">GitHub</a>
                     <a href="https://qros.netlify.app" class="project-btn" target="_blank" rel="noopener">Live Demo</a>
                 </div>
             </div>
@@ -735,7 +890,9 @@
                 </div>
                 <ul>
                     <li>College of Information Systems Science and Engineering</li>
-                    <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Introduction to UML (United Modeling Language), Project Based Learning, Software Engineering, Computer Networks, Computer Architecture, Digital Signal Processing</li>
+                    <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Introduction to UML
+                        Project Based Learning, Software Engineering, Computer Networks, Computer
+                        Architecture, Artificial Intelligence</li>
                 </ul>
             </div>
             <div class="experience-item fade-in">
@@ -781,9 +938,13 @@
                 <ul>
                     <li><strong>System Engineer Intern</strong></li>
                     <li>UR5e Pick and Place System Project</li>
-                    <li>Developed a robotic pick-and-place pipeline integrating YOLOv8 segmentation, OpenCV/ChArUco calibration, and Intel RealSense depth sensing to control a UR5e robot with a Robotiq 2F-85 gripper via Python and RTDE APIs.</li>
-                    <li>Implemented 3D pose estimation and coordinate transformation modules, enabling accurate real-time mapping from 2D images to robot base coordinates.</li>
-                    <li>Trained a custom YOLOv8 model with an accuracy of mAP50 ~0.995 and built a live centroid detection and segmentation program, enhancing precision and reliability of operations.</li>
+                    <li>Developed a robotic pick-and-place pipeline integrating YOLOv8 segmentation, OpenCV/ChArUco
+                        calibration, and Intel RealSense depth sensing to control a UR5e robot with a Robotiq 2F-85
+                        gripper via Python and RTDE APIs.</li>
+                    <li>Implemented 3D pose estimation and coordinate transformation modules, enabling accurate
+                        real-time mapping from 2D images to robot base coordinates.</li>
+                    <li>Trained a custom YOLOv8 model with an accuracy of mAP50 ~0.995 and built a live centroid
+                        detection and segmentation program, enhancing precision and reliability of operations.</li>
                 </ul>
             </div>
             <div class="experience-item fade-in">
@@ -796,8 +957,10 @@
                 </div>
                 <ul>
                     <li><strong>Employee at Nakamura Shouten (中村商店)</strong></li>
-                    <li>Managed kitchen operations including dishwashing, ingredient preparation, and cooking side dishes, contributing to efficient food service delivery for a high-volume restaurant.</li>
-                    <li>Collaborated effectively within a team of 5-6 members to streamline workflows and improve operational efficiency during peak hours.</li>
+                    <li>Managed kitchen operations including dishwashing, ingredient preparation, and cooking side
+                        dishes, contributing to efficient food service delivery for a high-volume restaurant.</li>
+                    <li>Collaborated effectively within a team of 5-6 members to improve operational efficiency during
+                        peak hours.</li>
                 </ul>
             </div>
         </div>
@@ -817,8 +980,11 @@
                 </div>
                 <ul>
                     <li><strong>RiOne Robotics Club Member</strong></li>
-                    <li>Built a ROS2 navigation pipeline on TurtleBot3 WafflePi, integrating Intel RealSense depth sensing, SLAM, and motion control scripts to improve autonomous navigation and obstacle avoidance.</li>
-                    <li>Competed at JapanOpen 2025 @Home League Competition with a danger detection and obstacle avoidance system.</li>
+                    <li>Built a ROS2 navigation pipeline on TurtleBot3 WafflePi, integrating Intel RealSense depth
+                        sensing, SLAM, and motion control scripts to improve autonomous navigation and obstacle
+                        avoidance.</li>
+                    <li>Competed at JapanOpen 2025 @Home League Competition with a danger detection and obstacle
+                        avoidance system.</li>
                 </ul>
             </div>
         </div>
@@ -837,7 +1003,8 @@
                     <span class="experience-date">Apr 2025 – Mar 2026</span>
                 </div>
                 <ul>
-                    <li>Awarded for academic achievement, innovation potential, and contributions to international exchange in engineering fields.</li>
+                    <li>Awarded for academic achievement, innovation potential, and contributions to international
+                        exchange in engineering fields.</li>
                 </ul>
             </div>
             <div class="experience-item fade-in">
@@ -849,7 +1016,8 @@
                     <span class="experience-date">Apr 2024 – Mar 2025</span>
                 </div>
                 <ul>
-                    <li>Awarded for strong academic performance and leadership as an international student in Japan.</li>
+                    <li>Awarded for strong academic performance and leadership as an international student in Japan.
+                    </li>
                 </ul>
             </div>
             <div class="experience-item fade-in">
@@ -904,13 +1072,24 @@
 
             <div class="contact-info fade-in">
                 <h3>Let's connect!</h3>
-                <p>I'm always interested in new opportunities and exciting projects. Whether you want to collaborate, have a question, or just want to say hi, feel free to reach out!</p>
+                <p>I'm always interested in new opportunities and exciting projects. Whether you want to collaborate,
+                    have a question, or just want to say hi, feel free to reach out!</p>
                 <div class="social-links">
-                    <a href="https://github.com/cronenberg64" class="social-link" title="GitHub" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:32px;height:32px;"></a>
-                    <a href="https://linkedin.com/in/jonathan-setiawan" class="social-link" title="LinkedIn" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:32px;height:32px;"></a>
-                    <a href="mailto:jonathanrustam2@gmail.com" class="social-link" title="Email"><img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/mail.svg" alt="Email" style="width:32px;height:32px;filter:invert(60%);"></a>
-                    <a href="https://www.instagram.com/cronen19?utm_source=ig_web_button_share_sheet&igsh=MWo3YzVod2E5bWQxdQ==" class="social-link" title="Instagram" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" style="width:32px;height:32px;background:#E4405F;border-radius:8px;padding:3px;"></a>
-                    <!-- Line contact removed as requested -->
+                    <a href="https://github.com/cronenberg64" class="social-link" title="GitHub" target="_blank"
+                        rel="noopener"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub" style="width:32px;height:32px;"></a>
+                    <a href="https://linkedin.com/in/jonathan-setiawan" class="social-link" title="LinkedIn"
+                        target="_blank" rel="noopener"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                            alt="LinkedIn" style="width:32px;height:32px;"></a>
+                    <a href="mailto:jonathanrustam2@gmail.com" class="social-link" title="Email"><img
+                            src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/mail.svg" alt="Email"
+                            style="width:32px;height:32px;filter:invert(60%);"></a>
+                    <!-- <a href="https://www.instagram.com/cronen19?utm_source=ig_web_button_share_sheet&igsh=MWo3YzVod2E5bWQxdQ=="
+                        class="social-link" title="Instagram" target="_blank" rel="noopener"><img
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram"
+                            style="width:32px;height:32px;background:#E4405F;border-radius:8px;padding:3px;"></a> -->
                 </div>
             </div>
         </div>
@@ -926,17 +1105,17 @@
                 // Scene setup
                 scene = new THREE.Scene();
                 camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                renderer = new THREE.WebGLRenderer({ 
+                renderer = new THREE.WebGLRenderer({
                     canvas: document.getElementById('planet-canvas'),
                     alpha: true,
-                    antialias: true 
+                    antialias: true
                 });
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 renderer.setClearColor(0x000000, 0);
 
                 // Create low-poly planet
                 const geometry = new THREE.IcosahedronGeometry(2, 1);
-                const material = new THREE.MeshPhongMaterial({ 
+                const material = new THREE.MeshPhongMaterial({
                     color: 0x00d4aa,
                     shininess: 100,
                     transparent: true,
@@ -948,7 +1127,7 @@
 
                 // Add wireframe overlay
                 const wireframe = new THREE.WireframeGeometry(geometry);
-                const wireframeMaterial = new THREE.LineBasicMaterial({ 
+                const wireframeMaterial = new THREE.LineBasicMaterial({
                     color: 0x4dabf7,
                     transparent: true,
                     opacity: 0.4
@@ -1024,10 +1203,10 @@
             for (let i = 0; i < satelliteCount; i++) {
                 const icon = icons[i];
                 const textureLoader = new THREE.TextureLoader();
-                textureLoader.load(icon.url, function(texture) {
-                    const material = new THREE.SpriteMaterial({ 
+                textureLoader.load(icon.url, function (texture) {
+                    const material = new THREE.SpriteMaterial({
                         map: texture,
-                        transparent: true 
+                        transparent: true
                     });
                     const sprite = new THREE.Sprite(material);
                     sprite.scale.set(0.7, 0.7, 1);
@@ -1056,7 +1235,7 @@
             // CSS fallback if Three.js fails
             const canvas = document.getElementById('planet-canvas');
             canvas.style.display = 'none';
-            
+
             // Create CSS animated background
             const fallbackBg = document.createElement('div');
             fallbackBg.style.cssText = `
@@ -1073,7 +1252,7 @@
                     linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
                 animation: backgroundPulse 8s ease-in-out infinite;
             `;
-            
+
             const style = document.createElement('style');
             style.textContent = `
                 @keyframes backgroundPulse {
@@ -1111,12 +1290,12 @@
                 // Animate floating particles
                 particles.forEach(particle => {
                     particle.position.add(particle.userData.velocity);
-                    
+
                     // Bounce particles back if they go too far
                     if (particle.position.distanceTo(particle.userData.originalPosition) > 5) {
                         particle.userData.velocity.multiplyScalar(-1);
                     }
-                    
+
                     // Gentle floating animation
                     particle.position.y += Math.sin(Date.now() * 0.001 + particle.position.x) * 0.001;
                 });
@@ -1158,7 +1337,7 @@
         function updateActiveNavLink() {
             const sections = document.querySelectorAll('.section');
             const navLinks = document.querySelectorAll('.nav-link');
-            
+
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -1182,7 +1361,7 @@
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
+
                 if (elementTop < window.innerHeight - elementVisible) {
                     element.classList.add('visible');
                 }
@@ -1210,24 +1389,24 @@
         function handleContactForm() {
             const form = document.querySelector('.contact-form');
             const submitBtn = form.querySelector('button[type="submit"]');
-            
-            form.addEventListener('submit', function(e) {
+
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // Simple form validation and submission simulation
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
                 const message = document.getElementById('message').value;
-                
+
                 if (name && email && message) {
                     submitBtn.textContent = 'Sending...';
                     submitBtn.disabled = true;
-                    
+
                     // Simulate form submission
                     setTimeout(() => {
                         submitBtn.textContent = 'Message Sent! ✓';
                         submitBtn.style.background = 'var(--accent-teal)';
-                        
+
                         // Reset form after 3 seconds
                         setTimeout(() => {
                             form.reset();
@@ -1246,21 +1425,21 @@
         function updatePlanetParallax() {
             const scrolled = window.pageYOffset;
             const parallax = scrolled * 0.5;
-            
+
             if (planet) {
                 planet.position.y = parallax * 0.005;
                 planet.rotation.z = scrolled * 0.0005;
-                
+
                 // Fade out planet as we scroll down
                 const fadePoint = window.innerHeight * 0.8;
                 const opacity = Math.max(0.1, 1 - (scrolled / fadePoint));
                 planet.material.opacity = opacity;
-                
+
                 // Also fade satellites and particles
                 satellites.forEach(satellite => {
                     satellite.material.opacity = opacity * 0.8;
                 });
-                
+
                 particles.forEach(particle => {
                     particle.material.opacity = opacity * 0.6;
                 });
@@ -1278,11 +1457,11 @@
         window.addEventListener('resize', onWindowResize);
 
         // Initialize everything when page loads
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             initPlanet();
             animateOnScroll();
             handleContactForm();
-            
+
             // Trigger initial animations
             setTimeout(() => {
                 document.querySelector('.hero .fade-in').classList.add('visible');
@@ -1295,7 +1474,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -1304,7 +1483,7 @@
         }, observerOptions);
 
         // Observe all fade-in elements
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.fade-in').forEach(el => {
                 observer.observe(el);
             });
@@ -1315,7 +1494,7 @@
             const tagline = document.querySelector('.hero-tagline');
             const text = '"Hi! I\'m a tech geek and I love robots"';
             tagline.textContent = '';
-            
+
             let i = 0;
             function type() {
                 if (i < text.length) {
@@ -1324,7 +1503,7 @@
                     setTimeout(type, 50);
                 }
             }
-            
+
             setTimeout(type, 1000);
         }
 
@@ -1332,29 +1511,30 @@
         window.addEventListener('load', typeWriter);
 
         // Add some interactive hover effects
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Project cards tilt effect
             const cards = document.querySelectorAll('.project-card');
             cards.forEach(card => {
-                card.addEventListener('mousemove', function(e) {
+                card.addEventListener('mousemove', function (e) {
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const y = e.clientY - rect.top;
-                    
+
                     const centerX = rect.width / 2;
                     const centerY = rect.height / 2;
-                    
+
                     const rotateX = (y - centerY) / 10;
                     const rotateY = (centerX - x) / 10;
-                    
+
                     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
                 });
-                
-                card.addEventListener('mouseleave', function() {
+
+                card.addEventListener('mouseleave', function () {
                     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
                 });
             });
         });
     </script>
 </body>
+
 </html>
